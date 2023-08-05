@@ -3,14 +3,14 @@ if SHIELD_KEYONE
 config ZMK_KEYBOARD_NAME
 	default "keyone"
 
-# config ZMK_SPLIT_BLE_ROLE_CENTRAL
-# 	default y
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
 
 endif
 
-# if SHIELD_FLIPPER_LEFT || SHIELD_FLIPPER_RIGHT
+if SHIELD_KEYONE_LEFT || SHIELD_KEYONE_RIGHT
 
-# config ZMK_SPLIT
-# 	default y
+config ZMK_SPLIT
+	default y
 
-# endif
+endif

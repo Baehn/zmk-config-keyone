@@ -1,2 +1,5 @@
-config SHIELD_KEYONE
-  def_bool $(shields_list_contains, keyone)
+config SHIELD_KEYONE_LEFT
+  def_bool $(shields_list_contains, keyone_left)
+
+config SHIELD_KEYONE_RIGHT
+  def_bool $(shields_list_contains, keyone_right)
