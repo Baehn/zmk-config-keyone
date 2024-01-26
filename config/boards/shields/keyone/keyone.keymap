@@ -4,6 +4,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include "keys_de.h"
+
+#define DEFAULT 0
+#define QWER    1
 
 / {
     behaviors {
@@ -18,7 +22,19 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
+    combos {
+        compatible = "zmk,combos";
+        combo_toqwer {
+            timeout-ms = <50>;
+            key-positions = <a s d f>;
+            bindings = <&tog QWER>;
+        };
+        combo_todef {
+            timeout-ms = <50>;
+            key-positions = <y x c v>;
+            bindings = <&tog DEFAULT>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -32,6 +48,22 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ /        │
             &kp Y      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &kp TAB    &kp ENTER      &kp SPACE  &kp BSPC
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        qwertz_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Z       │  U       │  I       │  O       │  -       │
+            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Z      &kp U      &kp I      &kp O      &kp MINUS 
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ _        │
+            &kp A       &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L     &kp UNDER 
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ ö        │
+            &kp Y      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp O_UM
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp TAB    &kp ENTER      &kp SPACE  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
