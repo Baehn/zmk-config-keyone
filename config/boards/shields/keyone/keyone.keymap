@@ -89,7 +89,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │  Z       │  U       │  I       │  O       │  /       │
-            &trans      &trans     &trans     &trans     &tran          &kp _Z     &kp U      &kp I      &kp O      &kp _SLSH 
+            &trans      &trans     &trans     &trans     &trans         &kp _Z     &kp U      &kp I      &kp O      &kp _SLSH 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  <       │  [       │  {       │  (       │  ^       │   │  H       │  J       │  K       │  L       │ P        │
             &kp _LT     &kp _LBKT  &kp _LBRC  &kp _LPAR  &kp _CAET      &kp H      &kp J      &kp K      &kp L     &kp P 
