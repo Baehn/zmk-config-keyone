@@ -26,13 +26,13 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp _SLSH>, <&kp _BSLH>;
-            mods = <(MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         under: under_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp _UNDR>, <&kp _MINUS>;
-            mods = <(MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
     combos {
@@ -88,10 +88,10 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp _Z     &kp U      &kp I      &kp O      &slbs 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ P        │
-          &mt LSHIFT A  &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L     &kp P 
+          &ht LSHIFT A  &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L     &kp P 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
-            &kp _Y      &kp X      &kp C   &mt LCTRL V   &kp B          &kp N      &kp M     &kp _COMA  &kp _DOT   &under
+            &kp _Y      &kp X      &kp C   &ht LCTRL V   &kp B          &kp N      &kp M     &kp _COMA  &kp _DOT   &under
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp TAB    &kp ENTER      &kp SPACE  &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
