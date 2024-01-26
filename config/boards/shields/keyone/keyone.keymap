@@ -47,11 +47,6 @@
             key-positions = <10 11 12 13>;
             bindings = <&tog DEFAULT>;
         };
-        combo_bootloader_left {
-            timeout-ms = <50>;
-            key-positions = <15 16 17 18>;
-            bindings = <&bootloader>;
-        };
         combo_esc {
             timeout-ms = <50>;
             key-positions = <12 13>;
@@ -60,12 +55,12 @@
         combo_tab {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            bindings = <&kp E>;
+            bindings = <&kp TAB>;
         };
-        combo_x {
+        combo_tab {
             timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp W>;
+            key-positions = <10 11>;
+            bindings = <&kp TAB>;
         };
     };
     keymap {
