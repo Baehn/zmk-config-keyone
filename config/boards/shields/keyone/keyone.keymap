@@ -26,12 +26,12 @@
         compatible = "zmk,combos";
         combo_toqwer {
             timeout-ms = <50>;
-            key-positions = <a s d f>;
+            key-positions = <0 1 2 3>;
             bindings = <&tog QWER>;
         };
         combo_todef {
             timeout-ms = <50>;
-            key-positions = <y x c v>;
+            key-positions = <10 11 12 13>;
             bindings = <&tog DEFAULT>;
         };
     };
