@@ -92,7 +92,7 @@
             &trans      &trans     &trans     &trans     &tran          &kp _Z     &kp U      &kp I      &kp O      &kp _SLSH 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  <       │  [       │  {       │  (       │  ^       │   │  H       │  J       │  K       │  L       │ P        │
-            &kp _LT     &kp _LBKT  &kp _LBRC  &kp -LPAR  &kp _CAET      &kp H      &kp J      &kp K      &kp L     &kp P 
+            &kp _LT     &kp _LBKT  &kp _LBRC  &kp _LPAR  &kp _CAET      &kp H      &kp J      &kp K      &kp L     &kp P 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  >       │  ]       │  }       │  )       │  #       │   │  N       │  M       │ ,        │ .        │ _        │
             &kp _GT     &kp _RBKT  &kp _RBRC  &mt _RPAR  _HASH          &kp N      &kp M     &kp _COMA  &kp _DOT   &kp _UNDR
