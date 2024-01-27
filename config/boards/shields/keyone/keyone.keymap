@@ -41,24 +41,27 @@
         compatible = "zmk,combos";
         combo_toqwer {
             timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&tog 3>;
+            key-positions = <0 1 2 3>;
+            bindings = <&tog 1>;
+            layers = <1>;
         };
         combo_todef {
             timeout-ms = <50>;
             key-positions = <10 11 12 13>;
             bindings = <&bt BT_CLR>;
+            layers = <1>;
         };
         combo_bootloader {
             timeout-ms = <50>;
             key-positions = <1 2 3 4>;
             bindings = <&bootloader>;
+            layers = <1>;
         };
-        combo_bluetooth_toggle {
-            timeout-ms = <50>;
-            key-positions = <3 4>;
-            bindings = <&out OUT_TOG>;
-        };
+        // combo_bluetooth_toggle {
+        //     timeout-ms = <50>;
+        //     key-positions = <3 4>;
+        //     bindings = <&out OUT_TOG>;
+        // };
 
         combo_esc {
             timeout-ms = <50>;
@@ -66,226 +69,12 @@
             bindings = <&kp ESC>;
             layers = <1>;
         };
-
-
-
-        combo_1 {
+        combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp A>;
+            key-positions = <22 23>;
+            bindings = <&kp TAB>;
+            layers = <1>;
         };
-
-
-        combo_2 {
-            timeout-ms = <50>;
-            key-positions = <0 2>;
-            bindings = <&kp B>;
-        };
-
-
-        combo_3 {
-            timeout-ms = <50>;
-            key-positions = <0 3>;
-            bindings = <&kp C>;
-        };
-
-
-        combo_4 {
-            timeout-ms = <50>;
-            key-positions = <0 4>;
-            bindings = <&kp D>;
-        };
-
-
-        combo_5 {
-            timeout-ms = <50>;
-            key-positions = <0 5>;
-            bindings = <&kp E>;
-        };
-
-
-        combo_6 {
-            timeout-ms = <50>;
-            key-positions = <0 6>;
-            bindings = <&kp F>;
-        };
-
-
-        combo_7 {
-            timeout-ms = <50>;
-            key-positions = <0 7>;
-            bindings = <&kp G>;
-        };
-
-
-        combo_8 {
-            timeout-ms = <50>;
-            key-positions = <0 8>;
-            bindings = <&kp H>;
-        };
-
-
-        combo_9 {
-            timeout-ms = <50>;
-            key-positions = <0 9>;
-            bindings = <&kp I>;
-        };
-
-
-        combo_10 {
-            timeout-ms = <50>;
-            key-positions = <0 10>;
-            bindings = <&kp J>;
-        };
-
-
-        combo_11 {
-            timeout-ms = <50>;
-            key-positions = <0 11>;
-            bindings = <&kp K>;
-        };
-
-
-        combo_12 {
-            timeout-ms = <50>;
-            key-positions = <0 12>;
-            bindings = <&kp L>;
-        };
-
-
-        combo_13 {
-            timeout-ms = <50>;
-            key-positions = <0 13>;
-            bindings = <&kp M>;
-        };
-
-
-        combo_14 {
-            timeout-ms = <50>;
-            key-positions = <0 14>;
-            bindings = <&kp N>;
-        };
-
-
-        combo_15 {
-            timeout-ms = <50>;
-            key-positions = <0 15>;
-            bindings = <&kp O>;
-        };
-
-
-        combo_16 {
-            timeout-ms = <50>;
-            key-positions = <0 16>;
-            bindings = <&kp P>;
-        };
-
-
-        combo_17 {
-            timeout-ms = <50>;
-            key-positions = <0 17>;
-            bindings = <&kp Q>;
-        };
-
-
-        combo_18 {
-            timeout-ms = <50>;
-            key-positions = <0 18>;
-            bindings = <&kp R>;
-        };
-
-
-        combo_19 {
-            timeout-ms = <50>;
-            key-positions = <0 19>;
-            bindings = <&kp S>;
-        };
-
-
-        combo_20 {
-            timeout-ms = <50>;
-            key-positions = <0 20>;
-            bindings = <&kp T>;
-        };
-
-
-        combo_21 {
-            timeout-ms = <50>;
-            key-positions = <0 21>;
-            bindings = <&kp U>;
-        };
-
-
-        combo_22 {
-            timeout-ms = <50>;
-            key-positions = <0 22>;
-            bindings = <&kp V>;
-        };
-
-
-        combo_23 {
-            timeout-ms = <50>;
-            key-positions = <0 23>;
-            bindings = <&kp W>;
-        };
-
-
-        combo_24 {
-            timeout-ms = <50>;
-            key-positions = <0 24>;
-            bindings = <&kp X>;
-        };
-
-
-        combo_25 {
-            timeout-ms = <50>;
-            key-positions = <0 25>;
-            bindings = <&kp Y>;
-        };
-
-
-        combo_26 {
-            timeout-ms = <50>;
-            key-positions = <0 26>;
-            bindings = <&kp Z>;
-        };
-
-
-        combo_27 {
-            timeout-ms = <50>;
-            key-positions = <0 27>;
-            bindings = <&kp A>;
-        };
-
-
-        combo_28 {
-            timeout-ms = <50>;
-            key-positions = <0 28>;
-            bindings = <&kp B>;
-        };
-
-
-        combo_29 {
-            timeout-ms = <50>;
-            key-positions = <0 29>;
-            bindings = <&kp C>;
-        };
-
-
-        combo_30 {
-            timeout-ms = <50>;
-            key-positions = <0 30>;
-            bindings = <&kp D>;
-        };
-
-
-        combo_31 {
-            timeout-ms = <50>;
-            key-positions = <0 31>;
-            bindings = <&kp E>;
-        };
-
-
     };
     keymap {
         compatible = "zmk,keymap";
@@ -341,15 +130,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Z       │  U       │  I       │  O       │  /       │
-            &none       &none      &none      &none      &none          &kp _Z     &kp U      &kp I      &kp O      &slbs 
+            &none       &none      &none      &none      &none          &none      &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ P        │
-            &none       &none      &none      &none      &none          &kp H      &kp J      &kp K      &kp L     &kp P 
+            &none       &none      &none      &none      &none          &none      &none      &none      &none     &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
-            &none       &none      &none      &none      &none          &kp N      &kp M     &kp _COMA  &kp _DOT   &under
+            &none       &none      &none      &none      &none          &none      &none     &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none      &none          &kp SPACE  &kp SPACE
+                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
