@@ -1,7 +1,7 @@
 text = """
         combo_NUM1 {
             timeout-ms = <50>;
-            key-positions = <NUM1>;
+            key-positions = <0 NUM1>;
             bindings = <&kp KEY>;
             layers = <1>
         };
