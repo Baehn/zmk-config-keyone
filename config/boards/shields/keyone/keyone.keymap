@@ -40,8 +40,8 @@
         compatible = "zmk,combos";
         combo_toqwer {
             timeout-ms = <50>;
-            key-positions = <0 1 2 3>;
-            bindings = <&tog NONE>;
+            key-positions = <0 1>;
+            bindings = <&tog 3>;
         };
         combo_todef {
             timeout-ms = <50>;
@@ -62,11 +62,11 @@
         };
 
 
+
         combo_14 {
             timeout-ms = <50>;
             key-positions = <0 14>;
             bindings = <&kp A>;
-            layers = <2>;
         };
 
 
@@ -74,7 +74,6 @@
             timeout-ms = <50>;
             key-positions = <0 15>;
             bindings = <&kp B>;
-            layers = <2>;
         };
 
 
@@ -82,7 +81,6 @@
             timeout-ms = <50>;
             key-positions = <0 16>;
             bindings = <&kp C>;
-            layers = <2>;
         };
 
 
@@ -90,7 +88,6 @@
             timeout-ms = <50>;
             key-positions = <0 17>;
             bindings = <&kp D>;
-            layers = <2>;
         };
 
 
@@ -98,7 +95,6 @@
             timeout-ms = <50>;
             key-positions = <0 18>;
             bindings = <&kp E>;
-            layers = <2>;
         };
 
 
@@ -106,7 +102,6 @@
             timeout-ms = <50>;
             key-positions = <0 19>;
             bindings = <&kp F>;
-            layers = <2>;
         };
 
 
@@ -114,7 +109,6 @@
             timeout-ms = <50>;
             key-positions = <0 20>;
             bindings = <&kp G>;
-            layers = <2>;
         };
 
 
@@ -122,7 +116,6 @@
             timeout-ms = <50>;
             key-positions = <0 21>;
             bindings = <&kp H>;
-            layers = <2>;
         };
 
 
@@ -130,7 +123,6 @@
             timeout-ms = <50>;
             key-positions = <0 22>;
             bindings = <&kp I>;
-            layers = <2>;
         };
 
 
@@ -138,7 +130,6 @@
             timeout-ms = <50>;
             key-positions = <0 23>;
             bindings = <&kp J>;
-            layers = <2>;
         };
 
 
@@ -146,7 +137,6 @@
             timeout-ms = <50>;
             key-positions = <0 24>;
             bindings = <&kp K>;
-            layers = <2>;
         };
 
 
@@ -154,7 +144,6 @@
             timeout-ms = <50>;
             key-positions = <0 25>;
             bindings = <&kp L>;
-            layers = <2>;
         };
 
 
@@ -162,7 +151,6 @@
             timeout-ms = <50>;
             key-positions = <0 26>;
             bindings = <&kp M>;
-            layers = <2>;
         };
 
 
@@ -170,7 +158,6 @@
             timeout-ms = <50>;
             key-positions = <0 27>;
             bindings = <&kp N>;
-            layers = <2>;
         };
 
 
@@ -178,7 +165,6 @@
             timeout-ms = <50>;
             key-positions = <0 28>;
             bindings = <&kp O>;
-            layers = <2>;
         };
 
 
@@ -186,7 +172,6 @@
             timeout-ms = <50>;
             key-positions = <0 29>;
             bindings = <&kp P>;
-            layers = <2>;
         };
 
 
@@ -194,7 +179,6 @@
             timeout-ms = <50>;
             key-positions = <0 30>;
             bindings = <&kp Q>;
-            layers = <2>;
         };
 
 
@@ -202,7 +186,6 @@
             timeout-ms = <50>;
             key-positions = <0 31>;
             bindings = <&kp R>;
-            layers = <2>;
         };
     };
     keymap {
