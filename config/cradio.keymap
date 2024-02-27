@@ -2,12 +2,15 @@
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include "keys_de.h"
 
-// Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+#define DEFAULT 0
+#define QWER    1
+#define SYML    2
+#define NONE    3
 
 &kscan0 {
     input-gpios
@@ -37,90 +40,162 @@
 / {
     behaviors {
         ht: hold_tap {
+            label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
+            global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+        slbs: slash_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp _SLSH>, <&kp _BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        under: under_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp _UNDR>, <&kp _MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
+    combos {
+        compatible = "zmk,combos";
+        combo_toqwer {
+            timeout-ms = <50>;
+            key-positions = <0 1 2 3>;
+            bindings = <&tog 1>;
+            // layers = <0,1>;
+        };
+        // combo_bt_clear {
+        //     timeout-ms = <50>;
+        //     key-positions = <10 11 12 13>;
+        //     bindings = <&bt BT_CLR>;
+        //     // layers = <1>;
+        // };
+        combo_bt_clear_all {
+            timeout-ms = <50>;
+            key-positions = <11 12 13 14>;
+            bindings = <&bt BT_CLR_ALL>;
+            // layers = <1>;
+        };
+        // combo_bt_next {
+        //     timeout-ms = <50>;
+        //     key-positions = <20 21 22>;
+        //     bindings = <&bt BT_NXT>;
+        //     // layers = <1>;
+        // };
+        combo_bootloader {
+            timeout-ms = <50>;
+            key-positions = <1 2 3 4>;
+            bindings = <&bootloader>;
+            // layers = <1>;
+        };
+        combo_reset {
+            timeout-ms = <50>;
+            key-positions = <0 1 2 3 4>;
+            bindings = <&sys_reset>;
+            // layers = <1>;
+        };
+        combo_bluetooth_toggle {
+            timeout-ms = <50>;
+            // key-positions = <21 22 23>;
+            key-positions = <10 11 12 13>;
+            bindings = <&out OUT_BLE>;
+        };
 
+        // todo: use macro approach from website
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp ESC>;
+            layers = <1>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp TAB>;
+            layers = <1>;
+        };
+        combo_bksp {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp BKSP>;
+            layers = <1>;
+        };
+        combo_ret {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp RET>;
+            layers = <1>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Z       │  U       │  I       │  O       │  P       │
+            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Z      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ '        │
+            &kp A       &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L     &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+        //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ /        │
+            &kp Y      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                             &kp TAB    &kp ENTER      &kp SPACE  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
-        right_layer {
+        qwertz_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Z       │  U       │  I       │  O       │  /       │
+            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp _Z     &kp U      &kp I      &kp O      &slbs 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ P        │
+          &ht LSHIFT A  &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L     &kp P 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
+            &kp _Y      &kp X      &kp C   &ht LCTRL V   &kp B          &kp N      &kp M     &kp _COMA  &kp _DOT   &under
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                             &kp TAB    &kp ENTER      &kp SPACE  &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
-        left_layer {
+        symbols_left {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│          │          │          │          │          │   │  Z       │  U       │  I       │  O       │  /       │
+            &trans      &trans     &trans     &trans     &trans         &kp _Z     &kp U      &kp I      &kp O      &kp _SLSH 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│  <       │  [       │  {       │  (       │  ^       │   │  H       │  J       │  K       │  L       │ P        │
+            &kp _LT     &kp _LBKT  &kp _LBRC  &kp _LPAR  &kp _CAET      &kp H      &kp J      &kp K      &kp L     &kp P 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│  >       │  ]       │  }       │  )       │  #       │   │  N       │  M       │ ,        │ .        │ _        │
+            &kp _GT     &kp _RBKT  &kp _RBRC  &mt _RPAR  _HASH          &kp N      &kp M     &kp _COMA  &kp _DOT   &kp _UNDR
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &trans         &kp SPACE  &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
-        tri_layer {
+        none_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Z       │  U       │  I       │  O       │  /       │
+            &none       &none      &none      &none      &none          &none      &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ P        │
+            &none       &none      &none      &none      &none          &none      &none      &none      &none     &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+        //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
+            &none       &none      &none      &none      &none          &none      &none     &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
