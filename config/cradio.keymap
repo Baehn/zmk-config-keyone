@@ -12,7 +12,7 @@
 #define SYML    2
 #define SYMR    3
 #define NUMS    4
-#define APP     5
+#define APPL    5
 #define NONE    6
 
 &kscan0 {
@@ -215,7 +215,7 @@
             &none       &kp LC(S)  &none      &kp LC(R)  &kp LC(T)       &kp _BTICK &kp _PRCNT &kp _DLLR  &kp _AT    &kp _PIPE 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │  to app  │          │          │   │  &       │  '       │  "       │  +       │  *       │
-            &none       &none      &sl APP    &none      &none          &kp _AMPS  &kp _APOS  &kp _DQT   &kp _PLUS  &kp _STAR
+            &none       &none      &sl APPL   &none      &none          &kp _AMPS  &kp _APOS  &kp _DQT   &kp _PLUS  &kp _STAR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │  ctl_c   │  clt_v   │          │   │  ~       │  =       │  ?       │  !       │  -       │
             &none       &none      &kp LC(C)  &kp LC(V)  &none          &kp _TILDE &kp _EQL   &kp _QMARK &kp _EXCL  &kp _MINUS
