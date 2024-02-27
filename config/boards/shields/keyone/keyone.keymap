@@ -60,7 +60,7 @@
         combo_bt_next {
             timeout-ms = <50>;
             key-positions = <20 21 22>;
-            bindings = <&bt BT_NEXT>;
+            bindings = <&bt BT_NXT>;
             // layers = <1>;
         };
         combo_bootloader {
