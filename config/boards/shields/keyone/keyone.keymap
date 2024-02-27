@@ -69,6 +69,12 @@
             bindings = <&bootloader>;
             // layers = <1>;
         };
+        combo_reset {
+            timeout-ms = <50>;
+            key-positions = <0 1 2 3 4>;
+            bindings = <&sys_reset>;
+            // layers = <1>;
+        };
         combo_bluetooth_toggle {
             timeout-ms = <50>;
             key-positions = <21 22 23>;
