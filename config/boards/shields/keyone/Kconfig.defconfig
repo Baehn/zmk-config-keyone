@@ -1,4 +1,4 @@
-if SHIELD_KEYONE
+if SHIELD_KEYONE_LEFT
 
 config ZMK_KEYBOARD_NAME
 	default "keyone"
