@@ -79,7 +79,7 @@
             timeout-ms = <50>;
             // key-positions = <21 22 23>;
             key-positions = <10 11 12 13>;
-            bindings = <&out OUT_TOG>;
+            bindings = <&out OUT_BLE>;
         };
 
         // todo: use macro approach from website

@@ -1,6 +1,6 @@
 file_format: "1"
 id: keyone
-name: keyone
+name: The Keyone
 type: shield
 url: https://github.com/davidphilipbarr/Sweep
 requires: [pro_micro]
