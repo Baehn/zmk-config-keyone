@@ -45,24 +45,24 @@
             bindings = <&tog 1>;
             // layers = <0,1>;
         };
-        combo_bt_clear {
-            timeout-ms = <50>;
-            key-positions = <10 11 12 13>;
-            bindings = <&bt BT_CLR>;
-            // layers = <1>;
-        };
+        // combo_bt_clear {
+        //     timeout-ms = <50>;
+        //     key-positions = <10 11 12 13>;
+        //     bindings = <&bt BT_CLR>;
+        //     // layers = <1>;
+        // };
         combo_bt_clear_all {
             timeout-ms = <50>;
             key-positions = <11 12 13 14>;
             bindings = <&bt BT_CLR_ALL>;
             // layers = <1>;
         };
-        combo_bt_next {
-            timeout-ms = <50>;
-            key-positions = <20 21 22>;
-            bindings = <&bt BT_NXT>;
-            // layers = <1>;
-        };
+        // combo_bt_next {
+        //     timeout-ms = <50>;
+        //     key-positions = <20 21 22>;
+        //     bindings = <&bt BT_NXT>;
+        //     // layers = <1>;
+        // };
         combo_bootloader {
             timeout-ms = <50>;
             key-positions = <1 2 3 4>;
@@ -77,7 +77,8 @@
         };
         combo_bluetooth_toggle {
             timeout-ms = <50>;
-            key-positions = <21 22 23>;
+            // key-positions = <21 22 23>;
+            key-positions = <10 11 12 13>;
             bindings = <&out OUT_TOG>;
         };
 
