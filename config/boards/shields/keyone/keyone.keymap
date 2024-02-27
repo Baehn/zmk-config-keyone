@@ -43,19 +43,19 @@
             timeout-ms = <50>;
             key-positions = <0 1 2 3>;
             bindings = <&tog 1>;
-            layers = <1>;
+            // layers = <0,1>;
         };
         combo_todef {
             timeout-ms = <50>;
             key-positions = <10 11 12 13>;
             bindings = <&bt BT_CLR>;
-            layers = <1>;
+            // layers = <1>;
         };
         combo_bootloader {
             timeout-ms = <50>;
             key-positions = <1 2 3 4>;
             bindings = <&bootloader>;
-            layers = <1>;
+            // layers = <1>;
         };
         // combo_bluetooth_toggle {
         //     timeout-ms = <50>;
@@ -63,6 +63,7 @@
         //     bindings = <&out OUT_TOG>;
         // };
 
+        // todo: use macro approach from website
         combo_esc {
             timeout-ms = <50>;
             key-positions = <12 13>;
@@ -73,6 +74,18 @@
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&kp TAB>;
+            layers = <1>;
+        };
+        combo_bksp {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp BKSP>;
+            layers = <1>;
+        };
+        combo_ret {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp RET>;
             layers = <1>;
         };
     };
