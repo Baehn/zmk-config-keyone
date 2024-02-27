@@ -12,7 +12,7 @@
 #define SYML    2
 #define SYMR    3
 #define NUMS    4
-#define app     5
+#define APP     5
 #define NONE    6
 
 &kscan0 {
@@ -247,10 +247,10 @@
             &none       &none      &none      &none      &none          &none      &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none       &none      &none      &none      &none          &none      &none      &none      &none      &none 
+            &none       &none      &none      &none      &none          &none      &kp F3     &kp F4     &kp F5     &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none       &none      &none      &none      &none          &none      &none     &none       &none      &none
+            &none       &none      &none      &none      &none          &none      &kp F6     &kp F7     &kp F8     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
