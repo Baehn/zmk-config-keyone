@@ -55,6 +55,16 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+        htl: hold_tap_layer {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&mo>, <&kp>;
+        };
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -188,7 +198,7 @@
         //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
             &kp _Y      &kp X      &kp C   &ht LCTRL V   &kp B          &kp N   &ht RCTRL M  &coma      &kp _DOT   &under
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp TAB    LHT(SYML)       LHT(SYMR)  &none
+                                             &kp TAB    LHT(SYML)       LHT(SYMR)  &htl NUMS SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
