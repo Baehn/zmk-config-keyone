@@ -198,7 +198,7 @@
           &ht LSHIFT A &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      &ht RSHIFT P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
-            &kp _Y      &kp X      &kp C   &ht LCTRL V   &kp B          &kp N   &ht RCTRL M  &coma      &kp _DOT   &under
+            &kp _Y      &kp X      &kp C   &ht LCTRL V   &kp B          &kp N   &ht RCTRL M  &coma      &dot       &under
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp TAB    LHT(SYML)       LHT(SYMR)  HTL(NUMS,SPACE)
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -259,10 +259,10 @@
             &none       &none      &none      &none      &none          &none      &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none       &none      &none      &none      &none          &none      &kp F3     &kp F4     &kp F5     &none 
+            &none       &none      &kp LG(W) &kp LG(TAB) &none          &none      &kp F3     &kp F4     &kp F5     &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none       &none      &none      &none      &none          &none      &kp F6     &kp F7     &kp F8     &none
+            &none       &none     &kp LA(F4) &kp LG(S)   &none          &none      &kp F6     &kp F7     &kp F8     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
