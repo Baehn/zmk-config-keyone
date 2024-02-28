@@ -16,6 +16,10 @@
 #define MOVE    6
 #define NONE    7
 
+&key_repeat {
+    usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
+};
+
 &kscan0 {
     input-gpios
     = <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
@@ -169,6 +173,18 @@
             bindings = <&kp RET>;
             layers = <1>;
         };
+        combo_colon {
+            timeout-ms = <50>;
+            key-positions = <17 26>;
+            bindings = <&kp _COLON>;
+            layers = <1>;
+        };
+        combo_semicolon {
+            timeout-ms = <50>;
+            key-positions = <16 27>;
+            bindings = <&kp _SEMI>;
+            layers = <1>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -200,7 +216,7 @@
         //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
             &kp _Y      &kp X      &kp C   &ht LCTRL V   &kp B          &kp N   &ht RCTRL M  &coma      &dot       &under
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp TAB    LHT(SYML)       LHT(SYMR)  HTL(NUMS,SPACE)
+                                             &key_repeat LHT(SYML)      LHT(SYMR)  HTL(NUMS,SPACE)
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
