@@ -112,12 +112,11 @@
             bindings = <&bt BT_CLR_ALL>;
             // layers = <1>;
         };
-        // combo_bt_next {
-        //     timeout-ms = <50>;
-        //     key-positions = <20 21 22>;
-        //     bindings = <&bt BT_NXT>;
-        //     // layers = <1>;
-        // };
+        combo_bt_next {
+            timeout-ms = <50>;
+            key-positions = <10 11 12 13>;
+            bindings = <&bt BT_NXT>;
+        };
         combo_bootloader {
             timeout-ms = <50>;
             key-positions = <1 2 3 4>;
@@ -130,13 +129,12 @@
             bindings = <&sys_reset>;
             // layers = <1>;
         };
-        combo_bluetooth_toggle {
-            timeout-ms = <50>;
-            // key-positions = <21 22 23>;
-            key-positions = <10 11 12 13>;
-            bindings = <&out OUT_BLE>;
-        };
-
+        // combo_bluetooth_toggle {
+        //     timeout-ms = <50>;
+        //     // key-positions = <21 22 23>;
+        //     key-positions = <10 11 12 13>;
+        //     bindings = <&out OUT_BLE>;
+        // };
         // todo: use macro approach from website
         combo_esc {
             timeout-ms = <50>;
