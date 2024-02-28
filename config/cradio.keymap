@@ -47,7 +47,6 @@
 
 
 #define LHT(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-#define HTL(layer, symbol) &atl // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
 / {
     behaviors {
@@ -60,16 +59,6 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
-        };
-        atl: hold_tap_layer {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&mo SYML>, <&kp SPACE>;
         };
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
@@ -216,7 +205,7 @@
         //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
             &kp _Y      &kp X      &kp C   &ht LCTRL V   &kp B          &kp N   &ht RCTRL M  &coma      &dot       &under
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &key_repeat LHT(SYML)      LHT(SYMR)  HTL(NUMS,SPACE)
+                                             &key_repeat LHT(SYML)      LHT(SYMR)  &lt NUMS SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
