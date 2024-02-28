@@ -208,7 +208,8 @@
         //│  Y       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ _        │
             &kp _Y      &kp X      &kp C   &ht LCTRL V   &kp B          &kp N   &ht RCTRL M  &coma      &dot       &under
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &key_repeat LHT(SYML)      LHT(SYMR)  &lt NUMS SPACE
+                                             //&key_repeat LHT(SYML)      LHT(SYMR)  &lt NUMS SPACE
+                                             &ht LSHIFT &sk LSHIFT LHT(SYML)      LHT(SYMR)  &lt NUMS SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
