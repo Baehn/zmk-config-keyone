@@ -139,43 +139,43 @@
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp ESC>;
-            layers = <1>;
+            layers = <1,2,3,4>;
         };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&kp TAB>;
-            layers = <1>;
+            layers = <1,2,3,4>;
         };
         combo_bksp {
             timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&kp BKSP>;
-            layers = <1>;
+            layers = <1,2,3,4>;
         };
         combo_delword {
             timeout-ms = <50>;
             key-positions = <16 17 18>;
             bindings = <&kp LC(BKSP)>;
-            layers = <1>;
+            layers = <1,2,3,4>;
         };
         combo_ret {
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp RET>;
-            layers = <1>;
+            layers = <1,2,3,4>;
         };
         combo_colon {
             timeout-ms = <50>;
             key-positions = <17 26>;
             bindings = <&kp _COLON>;
-            layers = <1>;
+            layers = <1,2,3,4>;
         };
         combo_semicolon {
             timeout-ms = <50>;
             key-positions = <16 27>;
             bindings = <&kp _SEMI>;
-            layers = <1>;
+            layers = <1,2,3,4>;
         };
     };
     keymap {
