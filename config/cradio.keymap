@@ -223,7 +223,7 @@
             &kp _LT     &kp _LBKT  &kp _LBRC  &kp _LPAR  &kp _CAET      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  >       │  ]       │  }       │  )       │  #       │   │          │          │          │          │          │
-            &kp _GT     &kp _RBKT  &kp _RBRC  &kp _RPAR  &kp _HASH      &kp HOME   &kp PG_UP  &kp PG_DN  &kp END    &none 
+            &kp _GT     &kp _RBKT  &kp _RBRC  &kp _RPAR  &kp _HASH      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none      &none          &sl MOVE  &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
